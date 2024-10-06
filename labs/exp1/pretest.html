@@ -1,0 +1,334 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title> Virtual Labs </title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <!-- Bootstrap 3.3.6 -->
+    <link rel="stylesheet" href="../../bootstrap/css/bootstrap.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="../../dist/css/AdminLTE.css">
+    <!-- AdminLTE Skins. Choose a skin from the css/skins folder instead of downloading all of them to reduce the load. -->
+    <link rel="stylesheet" href="../../dist/css/skins/_all-skins.min.css">
+    <script>
+        window.onload = function() {
+            document.getElementById("pretest").className = "active treeview";
+        }
+    </script>
+    <style>
+        #toggle_nav:hover {
+            background-color: #1261A0;
+        }
+        
+        #aim {
+            background-color: #009dff;
+        }
+        
+        #aim:hover,
+        #theory:hover,
+        #pretest:hover,
+        #procedure:hover,
+        #simulation:hover,
+        #result:hover,
+        #posttest:hover,
+        #references:hover {
+            background-color: #009dff;
+        }
+    </style>
+</head>
+
+<body class="hold-transition skin-blue sidebar-mini">
+    <!--Navigation Bar-->
+    <div class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-ex-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+                <a class="navbar-brand" href="http://iitb.ac.in"><span><img src="images/iitrLogo.png" style="margin-top:-15px;height:50px;width: 400px;"></span></a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-ex-collapse">
+
+            </div>
+        </div>
+    </div>
+
+    <div class="wrapper">
+        <header class="main-header">
+            <!-- Logo -->
+            <a href="../index.html" class="logo" style="background-color:#009dff; border-right:solid;border-right-color: #1261A0;">
+                <p align="center" style="font-size:1em;"><b>Programming with C <!-- Write your lab name --> </b></p>
+            </a>
+            <!-- Header Navbar: style can be found in header.less -->
+            <nav class="navbar navbar-static-top" style="background-color:#009dff;">
+                <!-- Sidebar toggle button-->
+                <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button" id="toggle_nav">
+                    <span class="sr-only">Toggle navigation</span>
+                </a>
+                <section class="content-header">
+                    <ol class="breadcrumb">
+                        <li>
+                            <a href="../index.html"><i class="fa fa-dashboard"></i>Programming with C</a>
+                        </li>
+                        <li>
+                            <a href="#"> recursion<!-- Write your experiment name --> </a>
+                        </li>
+                        <li class="active">Pre Test</li>
+                    </ol>
+                </section>
+            </nav>
+        </header>
+
+        <!-- Left side column. contains the logo and sidebar -->
+        <aside class="main-sidebar" style="background-color:#1261A0;">
+            <!-- sidebar: style can be found in sidebar.less -->
+            <section class="sidebar">
+                <!-- search form -->
+                <form action="#" method="get" class="sidebar-form">
+                    <div class="input-group"></div>
+                </form>
+                <!-- /.sear ch form -->
+                <!-- sidebar menu: : style can be found in sidebar.less -->
+                <ul class="sidebar-menu" style="background-color:#1261A0;">
+                    <li class="treeview" id="aim">
+                        <a href="index.html" id="aim">
+                            <i class="fa fa-files-o" style="color:white;"></i> <span style="color:white;">Aim</span>
+
+                        </a>
+                    </li>
+                    <li class="treeview" id="theory">
+                        <a href="theory.html" id="theory">
+                            <i class="fa fa-files-o" style="color:white;"></i>
+                            <span style="color:white;">Theory</span>
+                        </a>
+                    </li>
+                    <!--   <li class="treeview" id="numerical">
+                    <a href="numerical.php">
+                        <i class="fa fa-laptop"></i>
+                        <span>Numerical</span>
+                        <span class="pull-right-container">
+                        </span>
+                    </a>
+                </li>
+                <li class="treeview" id="program">
+                    <a href="program.php">
+                        <i class="fa fa-laptop"></i>
+                        <span>Program</span>
+                        <span class="pull-right-container">
+                        </span>
+                    </a>
+                </li> -->
+                    <li class="treeview" id="pretest">
+                        <a href="pretest.html" id="pretest">
+                            <i class="fa fa-files-o" style="color:white;"></i> <span style="color:white;">Pre Test</span>
+
+                        </a>
+                    </li>
+
+                    <li class="treeview" id="procedure">
+                        <a href="procedure.html" id="procedure">
+                            <i class="fa fa-files-o" style="color:white;"></i> <span style="color:white;">Procedure</span>
+                        </a>
+                    </li>
+                    <li class="treeview" id="simulation">
+                        <a href="simulation.html" id="simulation">
+                            <i class="fa fa-laptop" style="color:white;"></i>
+                            <span style="color:white;">Simulation</span>
+                            <span class="pull-right-container">
+                        </span>
+                        </a>
+                    </li>
+
+
+                    <li class="treeview" id="posttest">
+                        <a href=" posttest.html" id="posttest">
+                            <i class=" fa fa-files-o" style="color:white;">
+                    </i>
+                            <span style="color:white;">Post Test</span>
+                            <span class="pull-right-container">
+                    </span>
+                        </a>
+                    </li>
+                    <li class="treeview" id="ref">
+                        <a href="references.html" id="references">
+                            <i class="fa fa-files-o" style="color:white;"></i>
+                            <span style="color:white;">References</span>
+                            <span class="pull-right-container">
+                        </span>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+            <!-- /.sidebar -->
+        </aside>
+
+
+        <div class="content-wrapper">
+            <!-- Content Header (Page header) -->
+            <section class="content-header">
+                <h1 align="center">
+                    Recursion
+                    <!-- Write experiment name here -->
+                </h1>
+            </section>
+            <!-- Main content -->
+            <section class="content">
+                <h3 style="margin-top:5%"> Pre Test </h3>
+                <p style="font-size:200%; margin-top:2%">
+                    <ol style="font-size:140%; margin-top:2%">
+
+                        <li> In general, which of the following methods isn’t used to find the factorial of a number? </li> <br>
+                        <input type="radio" id="q1" name="q1">Non iterative / recursive<br>
+                        <input type="radio" id="q2" name="q1"> Iteration<br>
+                        <input type="radio" id="q3" name="q1"> Dynamic programming<br>
+                        <input type="radio" id="q4" name="q1"> Recursion<br>
+                        <p id="q1p"></p>
+
+                        <li> Which of the following recursive formula can be used to find the factorial of a number? </li> <br>
+                        <input type="radio" id="q5" name="q2">fact(n) = n * fact(n)<br>
+                        <input type="radio" id="q6" name="q2"> fact(n) = n * fact(n+1)<br>
+                        <input type="radio" id="q7" name="q2"> fact(n) = n * fact(1)<br>
+                        <input type="radio" id="q8" name="q2">fact(n) = n * fact(n-1)<br>
+                        <p id="q2p"></p>
+
+                        <li> Which of the following problem cannot be solved using recursion?</li> <br>
+
+                        <input type="radio" id="q9" name="q3"> Tower of Hanoi
+                        <br>
+                        <input type="radio" id="q10" name="q3"> Problems without base case
+                        <br>
+                        <input type="radio" id="q11" name="q3">Tree Traversal
+                        <br>
+                        <input type="radio" id="q12" name="q3"> Fibonacci series
+                        <br>
+                        <p id="q3p"></p>
+
+                        <li> Choose the correct answer. </li> <br>
+                        <input type="radio" id="q13" name="q4"> Recursion uses more memory compared to iteration?<br>
+                        <input type="radio" id="q14" name="q4"> Recursion is always better than iteration.<br>
+                        <input type="radio" id="q15" name="q4"> Recursion uses less memory compared to iteration.<br>
+                        <input type="radio" id="q16" name="q4"> Iterative function is always better and simpler to write than recursion.<br>
+                        <p id="q4p"></p>
+
+                        <li> Recursion is similar to which of the following? </li> <br>
+                        <input type="radio" id="q17" name="q5"> Switch Case <br>
+                        <input type="radio" id="q18" name="q5">Loop<br>
+                        <input type="radio" id="q19" name="q5"> If-else <br>
+                        <input type="radio" id="q20" name="q5"> None<br>
+                        <p id="q5p"></p>
+                    </ol>
+                    <button id="result" onclick="result1();this.disabled=true;" type="submit" class="btn btn-primary">Submit</button>
+
+
+            </section>
+
+            <!--Theory of experiment -->
+            </p>
+            </section>
+            <!-- /.content -->
+        </div>
+        <footer class="main-footer">
+            <h4 align="center">Lab contributed by Virtual Labs IIT Roorkee
+                <!-- Institute Name -->
+            </h4>
+        </footer>
+    </div>
+
+</body>
+<script>
+    function result1() {
+        if (document.getElementById('q1').checked) {
+            document.getElementById('q1p').innerHTML = "Correct";
+            document.getElementById('q1p').style.color = "green";
+            document.getElementById('q1p').style.fontSize = "18px"
+            document.getElementById('q1p').style.fontWeight = "bold"
+
+
+        } else {
+            document.getElementById('q1p').innerHTML = "Wrong Answer, the correct option is A ";
+            document.getElementById('q1p').style.color = "red"
+            document.getElementById('q1p').style.fontSize = "18px"
+            document.getElementById('q1p').style.fontWeight = "bold"
+
+
+        }
+
+        if (document.getElementById('q8').checked) {
+            document.getElementById('q2p').innerHTML = "Correct";
+            document.getElementById('q2p').style.color = "green"
+            document.getElementById('q2p').style.fontSize = "18px"
+            document.getElementById('q2p').style.fontWeight = "bold"
+
+
+        } else {
+            document.getElementById('q2p').innerHTML = "Wrong Answer, the correct option is D ";
+            document.getElementById('q2p').style.color = "red"
+            document.getElementById('q2p').style.fontSize = "18px"
+            document.getElementById('q2p').style.fontWeight = "bold"
+
+        }
+
+        if (document.getElementById('q10').checked) {
+            document.getElementById('q3p').innerHTML = "Correct";
+            document.getElementById('q3p').style.color = "green"
+            document.getElementById('q3p').style.fontSize = "18px"
+            document.getElementById('q3p').style.fontWeight = "bold"
+
+        } else {
+            document.getElementById('q3p').innerHTML = "Wrong Answer, the correct option is B ";
+            document.getElementById('q3p').style.color = "red"
+            document.getElementById('q3p').style.fontSize = "18px"
+            document.getElementById('q3p').style.fontWeight = "bold"
+
+        }
+        if (document.getElementById('q13').checked) {
+            document.getElementById('q4p').innerHTML = "Correct";
+            document.getElementById('q4p').style.color = "green"
+            document.getElementById('q4p').style.fontSize = "18px"
+            document.getElementById('q4p').style.fontWeight = "bold"
+
+        } else {
+            document.getElementById('q4p').innerHTML = "Wrong Answer, the correct option is A ";
+            document.getElementById('q4p').style.color = "red"
+            document.getElementById('q4p').style.fontSize = "18px"
+            document.getElementById('q4p').style.fontWeight = "bold"
+
+        }
+        if (document.getElementById('q18').checked) {
+            document.getElementById('q5p').innerHTML = "Correct";
+            document.getElementById('q5p').style.color = "green"
+            document.getElementById('q5p').style.fontSize = "18px"
+            document.getElementById('q5p').style.fontWeight = "bold"
+
+        } else {
+            document.getElementById('q5p').innerHTML = "Wrong Answer, the correct option is B ";
+            document.getElementById('q5p').style.color = "red"
+            document.getElementById('q5p').style.fontSize = "18px"
+            document.getElementById('q5p').style.fontWeight = "bold"
+
+        }
+    }
+</script>
+
+</html>
+
+<!-- ./wrapper -->
+<!-- jQuery 2.2.3 -->
+<script src="../../plugins/jQuery/jquery-2.2.3.min.js"></script>
+<!-- jQuery UI 1.11.4 -->
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+<!-- Bootstrap 3.3.6 -->
+<script src="../../bootstrap/js/bootstrap.min.js"></script>
+<!-- Slimscroll -->
+<script src="../../plugins/slimScroll/jquery.slimscroll.min.js"></script>
+<!-- FastClick -->
+<script src="../../plugins/fastclick/fastclick.js"></script>
+<!-- AdminLTE App -->
+<script src="../../dist/js/app.min.js"></script>

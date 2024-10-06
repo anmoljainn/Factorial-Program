@@ -1,0 +1,1228 @@
+<html>
+
+<head>
+
+    <title>
+
+        Flow chart
+
+    </title>
+
+    <link rel="stylesheet" href="flowchart.css">
+
+    <script src="flowchart.js"></script>
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+
+
+</head>
+<style>
+    div {
+        box-sizing: border-box;
+    }
+    
+    #anm {
+        position: absolute;
+        width: 500px;
+        height: 755px;
+        border: 2px solid black;
+        margin: 0 auto;
+        padding: 15px;
+        margin-top: 50px;
+        margin-left: 650px;
+    }
+    
+    .template-program {
+        position: absolute;
+        width: 500px;
+        height: 755px;
+        border: 2px solid black;
+        margin: 0 auto;
+        padding: 20px;
+        margin-top: 50px;
+        margin-left: 80px;
+    }
+    
+    .template1-wrap {
+        position: absolute;
+        width: 450px;
+        height: 500px;
+        border: 2px solid black;
+        margin: 0 auto;
+        padding: 75px;
+        margin-top: 50px;
+        margin-left: 1220px;
+    }
+    
+    .template2-wrap {
+        position: absolute;
+        width: 450px;
+        height: 175px;
+        border: 2px solid black;
+        margin: 0 auto;
+        padding: 57px;
+        margin-top: 630px;
+        margin-left: 1220px;
+    }
+    
+    footer {
+        position: absolute;
+        width: 1900px;
+        height: 50px;
+        background-color: #282d32;
+        margin-top: 1000px;
+        color: #fff;
+        padding: 2px 0 10px -20;
+        margin-left: 0px;
+        font-size: 12px;
+        line-height: 12px;
+        border-radius: 5px;
+        text-align: center;
+    }
+    
+    .copyright {
+        text-align: center;
+        font-size: 20px;
+        position: absolute;
+        font-weight: bolder;
+    }
+    
+    #Next {
+        border-radius: 12px;
+        font-size: 18px;
+        padding: 12px;
+        background-color: #4CAF50;
+        ;
+        border: 2px solid #4CAF50;
+        font-weight: bolder;
+    }
+    
+    #next:hover {
+        background-color: white;
+        color: black;
+        border: 4px solid #4CAF50;
+        cursor: pointer;
+    }
+    
+    .button2 {
+        border-radius: 12px;
+        font-size: 18px;
+        padding: 12px;
+        background-color: #4CAF50;
+        border: 2px solid #4CAF50;
+        font-weight: bolder;
+    }
+    
+    .button2:hover {
+        background-color: white;
+        color: black;
+        border: 4px solid #4CAF50;
+        cursor: pointer;
+    }
+    
+    .button3 {
+        border-radius: 12px;
+        font-size: 18px;
+        padding: 11px;
+        background-color: #4CAF50;
+        border: 4px solid #4CAF50;
+        font-weight: bolder;
+    }
+    
+    .button3:hover {
+        background-color: white;
+        color: black;
+        border: 4px solid red;
+        cursor: pointer;
+    }
+    
+    .button4 {
+        border-radius: 12px;
+        font-size: 18px;
+        padding: 12px;
+        background-color: #4CAF50;
+        border: 2px solid #4CAF50;
+        font-weight: bolder;
+    }
+    
+    .button4:hover {
+        background-color: white;
+        color: black;
+        border: 4px solid #4CAF50;
+        cursor: pointer;
+    }
+    
+    .button5 {
+        border-radius: 12px;
+        font-size: 18px;
+        padding: 12px;
+        background-color: #4CAF50;
+        border: 2px solid #4CAF50;
+        font-weight: bolder;
+    }
+    
+    .button5:hover {
+        background-color: white;
+        color: black;
+    }
+    
+    .line-highlight {
+        color: red;
+        font-weight: bold;
+    }
+    
+    .line-highlight2 {
+        fill: #FFDB58;
+        ;
+    }
+    
+    .swal-modal {
+        border: 3px solid black;
+    }
+    
+    .swal-title {
+        margin: 0px;
+        font-size: 24px;
+    }
+    
+    .swal-text {
+        background-color: #FEFAE3;
+        padding: 8px;
+        border: 1px solid #FEFAE3;
+        display: block;
+        margin: 22px;
+        text-align: center;
+        color: #61534e;
+    }
+    
+    .swal-footer {
+        background-color: rgb(245, 248, 250);
+        margin-top: 32px;
+        border-top: 1px solid #E9EEF1;
+        overflow: hidden;
+    }
+    
+    .swal-button {
+        padding: 7px 19px;
+        border-radius: 2px;
+        background-color: #4962B3;
+        font-size: 12px;
+        border: 1px solid #3e549a;
+        text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.3);
+    }
+    
+    .dropbtn {
+        background-color: #4CAF50;
+        color: black;
+        padding: 16px;
+        font-size: 20px;
+        border: 5px solid #4CAF50;
+        font-weight: bolder;
+        border-radius: 12px;
+    }
+    
+    .dropdown {
+        position: absolute;
+        display: inline-block;
+        margin-left: 1700px;
+        margin-top: 50px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+    
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f1f1f1;
+        min-width: 460px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+    }
+    
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+    
+    .dropdown-content a:hover {
+        background-color: #808080;
+    }
+    
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+    
+    .dropdown:hover .dropbtn {
+        background-color: white;
+    }
+    
+    .diamond {
+        position: relative;
+        height: 190px;
+        width: 190px;
+        text-align: center;
+        font-size: 20px;
+        margin-top: 220px;
+        margin-left: 0%;
+        display: inline-block;
+        left: 50%;
+    }
+    
+    .diamond:before {
+        position: absolute;
+        content: '';
+        top: 0px;
+        left: 0px;
+        height: 100%;
+        background-color: #8BE5AD;
+        width: 100%;
+        margin: auto;
+        transform: rotateX(45deg) rotateZ(45deg);
+        box-shadow: 0px 0px 12px gray;
+        display: inline-block;
+    }
+    
+    .diamond-inner {
+        width: 180px;
+        height: 180px;
+        position: relative;
+        margin: auto;
+        font: 19px Helvetica, Arial, Times;
+        font-weight: bold;
+        color: white;
+        margin: auto;
+        margin-top: 60px;
+        display: inline-block;
+        white-space: normal;
+    }
+    
+    .arrow {
+        border: solid black;
+        border-width: 0 6px 6px 0;
+        contain: "&#xf0da";
+        display: inline-block;
+        padding: 3px;
+    }
+    
+    .down {
+        transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+    }
+    
+    .right {
+        transform: rotate(-45deg);
+        -webkit-transform: rotate(-45deg);
+    }
+    
+    .left {
+        transform: rotate(135deg);
+        -webkit-transform: rotate(135deg);
+    }
+</style>
+
+<body>
+    <div style="height: 950px;width:1900px;margin-left:100px;border:2px solid black;">
+        <div class="dropdown">
+
+            <button class="dropbtn">Instructions</button>
+
+            <div class="dropdown-content">
+
+                &nbsp;
+
+
+                <p> <b> Step 1: Click on Start button to proceed.</b> </p>
+
+                <p> <b> Step 2: Click on Next button untill we reach the &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;end of the code and we can also use the &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;previous button to read the previous &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;code. </b>                    </p>
+
+                <p> <b> Step 3: Click on Run button to move to the &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;output section.  </b> </p>
+
+                <p> <b> Step 4: Enter the values in the required fields. </b></p>
+
+                <p> <b> Step 5: Press Execute button to see the output.</b></p>
+
+                <p> <b> Step 6: Press Reset button to reset the page.</b> </p>
+
+
+            </div>
+
+        </div>
+
+
+
+
+
+
+
+
+
+        <div class="template-program">
+
+            <div style="position: absolute;margin-top:100px ;margin-left: 10px; font-size: 22px; " class="pro">
+
+                <div style=" padding: -45px; background-color: #4CAF50; border: 2px solid black; width: 500px; font-size: 25px; position: absolute; margin-top:-120px ; margin-left:-32px ;"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Code</b></div>
+
+                <p id="code_para" style="margin-top: -35px; display: none;">
+                    <b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <Span id="line1" class="line">#include <span><b><</b></span>stdio.h></Span><br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <Span id="line2" class="line">long int multiplyNumbers(int n);</Span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <Span id="line3" class="line">void main()</Span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                    <Span id="line4" class="line">{</Span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <Span id="line5" class="line"> int n, fact;</Span><br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                    <Span id="line6" class="line">printf("Enter a positive integer: ");</Span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <Span id="line7" class="line"> scanf("%d",&n);</Span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                    <Span id="line8" class="line">printf(" Factorial of %d= %ld",n, &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;multiplyNumbers(n));</Span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <Span id="line9" class="line">return 0;</Span><br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <Span id="line10" class="line">}</Span> <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <Span id="line11" class="line">long int multiplyNumbers(int n);</Span> <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <Span id="line12" class="line">{</Span> <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <Span id="line13" class="line">if (n>=1)</Span> <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <Span id="line14" class="line">return n*multiplyNumbers(n-1);</Span> <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <Span id="line15" class="line">else</Span> <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                    <Span id="line16" class="line">return 1;</Span> <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                    <Span id="line17" class="line">}</Span> <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <Span id="line18" class="line"></Span><br>
+
+                    </b>
+                </p>
+
+            </div>
+        </div>
+
+
+        <div class="template-wrap" style="overflow-y:auto" style="overflow-x: hidden;" id="anm">
+
+            <div style=" padding: -5px; background-color:#4CAF50 ; border: 2px solid black; width: 498px; font-size: 25px; position: absolute; margin-top: -15px;  margin-left: -15px;" <center> <b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Flow chart </b> </center>
+            </div>
+
+            <div style="position: absolute; margin-top:-60px ; margin-left:-630px ;display: none;" id="flowchart_div" class="all">
+
+                <div style="position: absolute; margin-top: 45px; margin-left: 670px;" class="cir">
+
+                    <svg>
+
+<ellipse id="start" class="flow" cx="200" cy="80" r="40" rx="90" ry="30" stroke="black" stroke-width="2.2" fill="#8BE5AD" />
+
+<text style= " font-size: 22px;font-weight:bolder;" id="start_text" x="180" y="87" fill="black" > Start </text>
+
+</svg>
+
+                </div>
+
+                <div style="position: absolute; margin-top: 155px ; margin-left:720px;">
+
+                    <svg>
+        <defs>
+          <marker id="arrowhead1" markerWidth="10" markerHeight="7" 
+          refX="0" refY="3.5" orient="auto"  >
+            <polygon points="0 0, 10 3.5, 0 7" id="arrowhead1"/>
+          </marker>
+        </defs>
+        <line x1="150" y1="-1300" x2="150" y2="53" stroke="#000" 
+        stroke-width="1.7" marker-end="url(#arrowhead1)"id="l1" />
+      </svg>
+
+                </div>
+
+                <div style="position: absolute; margin-top: 174px; margin-left: 720px ;" class="rec">
+
+                    <svg width="1000px" height="1000px" viewBox="0 0 200 200">
+        <!-- parallelogram -->
+        <polygon points="15,10  55, 10  45, 20  5, 20" class="flow" id="f"
+          style="fill:#8BE5AD; stroke-width: 0.4; stroke: black;"/>
+    <text style="font-size: 4px;font-weight:bolder;" x="22" y="16" fill=black>   Enter n </text>
+   
+
+</svg>
+                </div>
+
+
+                <div style="position: absolute; margin-top:275px ; margin-left:720px;">
+
+                    <svg>
+        <defs>
+          <marker id="arrowhead2" markerWidth="10" markerHeight="7" 
+          refX="0" refY="3.5" orient="auto">
+            <polygon points="0 0, 10 3.5, 0 7" id="arrowhead2"/>
+          </marker>
+        </defs>
+        <line x1="150" y1="-1300" x2="150" y2="50" stroke="#000" 
+        stroke-width="1.7" marker-end="url(#arrowhead2)" id="l2"/>
+      </svg>
+
+                </div>
+
+
+                <div style="position: absolute; margin-top: 293px; margin-left: 720px ;" class="rec">
+
+                    <svg width="1000px" height="1000px" viewBox="0 0 200 200">
+        <!-- parallelogram -->
+        <polygon points="5,10  55, 10  55, 20  5, 20" class="flow" id="s"
+          style="fill:#8BE5AD; stroke-width: 0.4; stroke: black;"/>
+    <text style="font-size: 4px;font-weight:bolder;" x="26" y="14" fill=black> Set </text>
+    <text style="font-size: 4px;font-weight:bolder;" x="22" y="17" fill=black> Factorial = 1 </text>
+    
+
+
+</svg>
+                </div>
+
+                <div style="position: absolute; margin-top:395px ; margin-left:720px;">
+
+                    <svg>
+            <defs>
+              <marker id="arrowhead3" markerWidth="10" markerHeight="7" 
+              refX="0" refY="3.5" orient="auto">
+                <polygon points="0 0, 10 3.5, 0 7" id="arrowhead3"/>
+              </marker>
+            </defs>
+            <line x1="150" y1="-1300" x2="150" y2="50" stroke="#000" 
+            stroke-width="1.7" marker-end="url(#arrowhead3)" id="l3"/>
+          </svg>
+
+                </div>
+
+
+                <div style="position: absolute; margin-top:545px ; margin-left: 772px;transform: rotate(45deg);" class="rec">
+                    <svg>
+                        <rect x="0" y="0" width="110" height="110" style="fill:#8BE5AD;stroke-width: 2.5;stroke:black" id="sum" class="flow"/>
+                        <text style="font-size: 22px;font-weight:bolder;transform:rotate(-45deg);" x="-33" y="74" fill="black">  is (n>=1) </text>   
+                        </svg>
+
+
+
+
+                </div>
+
+                <div style="position: absolute; margin-top:618px ; margin-left:720px;">
+
+                    <svg>
+        <defs>
+          <marker id="arrowhead4" markerWidth="10" markerHeight="7" 
+          refX="0" refY="3.5" orient="auto">
+            <polygon points="0 0, 10 3.5, 0 7" id="arrowhead4"/>
+          </marker>
+        </defs>
+        <line x1="150" y1="-1300" x2="150" y2="55" stroke="#000" 
+        stroke-width="1.7" marker-end="url(#arrowhead4)" id="l4" />
+      </svg>
+
+                </div>
+                <div style="position: absolute; margin-top:-88px ; margin-left:50px;" class=" rec">
+                    <div style="position: absolute; margin-top:775px ; margin-left: 720px;" class=" rec">
+
+                        <svg>
+                        <rect x="0" y="0" width="220" height="65" style="fill:#8BE5AD;stroke-width: 2.5;stroke:black" id="sum1" class="flow"/>
+                        <text style="font-size: 22px;font-weight:bolder;" x="75" y="40" fill="black"> n = n-1 </text>   
+                        </svg>
+                        <canvas id="myCanvas2" width="300" height="205" style="margin-top: -298px; margin-left: 98px;"></canvas>
+                    </div>
+                </div>
+
+
+                <div style="position: absolute; margin-top:755px ; margin-left:720px;">
+                    <svg>
+                    <defs>
+                    <marker id="arrowhead5" markerWidth="10" markerHeight="7" 
+                    refX="0" refY="3.5" orient="auto"  >
+                    <polygon points="0 0, 10 3.5, 0 7" id="arrowhead5"/>
+                    </marker>
+                    </defs>
+                    <line x1="150" y1="-1300" x2="150" y2="50" stroke="#000" 
+                    stroke-width="1.7" marker-end="url(#arrowhead5)"id="l5" />
+                    </svg>
+
+                    <!--Rectangle-->
+                    <div style="position: absolute; margin-top:-87px ; margin-left:50px;" class=" rec">
+                        <svg>
+                    <rect x="0" y="0" width="220" height="65" style="fill:#8BE5AD;stroke-width: 2.5;stroke:black" id="sum2" class="flow"/>
+                    <text style="font-size: 20px;font-weight:bolder;" x="10" y="35" fill="black">Factorial = Factorial*n</text>   
+                     
+
+                    </svg>
+                        <canvas id="myCanvas3" width="300" height="120" style="margin-top: 30px; margin-left: -600px; position: absolute;"></canvas>
+                        <canvas id="myCanvas4" width="300" height="312" style="margin-top: -279px; margin-left: -430px;position: absolute;"></canvas>
+                        <canvas id="myCanvas5" width="300" height="110" style="margin-top: -278.6px; margin-left: -578px; position: absolute;"></canvas>
+
+
+                        <div style="position: absolute; margin-top:-502.3px; transform: rotate(-90deg);  margin-left:-117px;">
+
+                            <svg>
+                <defs>
+                  <marker id="arrowhead1" markerWidth="10" markerHeight="7" 
+                  refX="0" refY="3.5" orient="auto"  >
+                    <polygon points="0 0, 10 3.5, 0 7" id="arrowhead1"/>
+                  </marker>
+                </defs>
+                <line x1="151" y1="-1300" x2="150" y2="50" stroke="#000" 
+                stroke-width="1.8" marker-end="url(#arrowhead1)"id="l1" />
+              </svg>
+
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <!--Parallelogram-->
+                <div style="position: absolute; margin-top: 590px; margin-left: 1050px ;" class="rec">
+                    <svg width="900px" height="900px" viewBox="0 0 200 200">
+    <polygon points="15,10  55, 10  45, 20  5, 20" class="flow" id="t"
+    style="fill:#8BE5AD; stroke-width: 0.4; stroke: black;"/>
+    <text style="font-size: 4px;font-weight:bolder;text-align:center" x="17" y="16" fill=black> Print Factorial</text>
+    </svg>
+                    <canvas id="myCanvas" width="300" height="100" style="margin-top: -950px; margin-left: 118px;"></canvas>
+                    <div style="position: absolute; margin-top: -69px ; margin-left:-30px;">
+
+                        <svg>
+            <defs>
+              <marker id="arrowhead1" markerWidth="10" markerHeight="7" 
+              refX="0" refY="3.5" orient="auto"  >
+                <polygon points="0 0, 10 3.5, 0 7" id="arrowhead1"/>
+              </marker>
+            </defs>
+            <line x1="150" y1="-1300" x2="150" y2="50" stroke="#000" 
+            stroke-width="1.7" marker-end="url(#arrowhead1)"id="l1" />
+          </svg>
+
+                    </div>
+                    <div style="position: absolute; margin-top: 40px ; margin-left:-28px;">
+
+                        <svg>
+            <defs>
+              <marker id="arrowhead1" markerWidth="10" markerHeight="7" 
+              refX="0" refY="3.5" orient="auto"  >
+                <polygon points="0 0, 10 3.5, 0 7" id="arrowhead1"/>
+              </marker>
+            </defs>
+            <line x1="150" y1="-1300" x2="150" y2="50" stroke="#000" 
+            stroke-width="1.7" marker-end="url(#arrowhead1)"id="l1" />
+          </svg>
+
+                    </div>
+
+
+
+
+
+                </div>
+
+
+                <div style="position: absolute; margin-top: 695px; margin-left: 980px;" class="cir">
+
+                    <svg width="400" height="140">
+                        <ellipse  cx="200" cy="80" r="40" rx="90" ry="30" stroke="black" stroke-width="2" fill="#8BE5AD" class="flow" id="end"/>
+<text style="font-size: 22px;font-weight:bolder;" x="180" y="87" fill="black"> End </text>
+
+</svg>
+
+
+
+
+                </div>
+
+
+
+            </div>
+
+        </div>
+
+
+
+
+        <div style="position: absolute;" class="template1-wrap">
+
+            <p style=" padding: -5px; background-color:#4CAF50 ; width: 444px; border: 2px solid black; position: absolute; margin-top:-76px ; margin-left:-76px ; font-size: 25px; "> <b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Output</b> </p>
+
+            <p id="output_label" style="position: absolute; margin-top:250px ; margin-left:-55px;font-weight: bolder;font-size: 22px;display: none;"> <b>Output:</b> <input placeholder="Result" id="answer" style="width:160px;height: 35px;border: 2px solid black;font-size: 15px;font-weight: bolder;"> </p>
+
+            <form>
+
+                <p id="first_no_label" style="position: absolute; margin-top: 30px; margin-left:-55px;font-weight: bolder;font-size: 22px;display: none; ">Enter a positive integer: <b></b>
+                    <input placeholder="Enter the number" id="first" style="width:150px;height: 35px;border: 2px solid black;display: none;font-size: 15px;font-weight: bolder;"> <br><br></p>
+
+            </form>
+
+        </div>
+
+
+
+
+
+
+
+        <div style="position: absolute;" class="template2-wrap">
+
+            <div style=" padding: -5px; background-color: #4CAF50; width: 448px; border: 2px solid black; font-size: 25px; position: absolute; margin-top: -58px; margin-left:-58px;" <center> <b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Explanation</b></center>
+            </div>
+            <p id="Output2" style="margin-top: -25px;position:absolute;margin-left: -55px;width:443px;height: 80px;border: none;font-size: 20px;font-weight: bolder;padding:5px;"> </p>
+        </div>
+
+
+
+
+
+        <button class="button4" style="position: absolute; margin-top:850px ; margin-left: 160px;" type="button" id="start_bt" onclick="Startprograms()"><b>Start</b></button>
+        <button style="position: absolute; margin-top: 850px; margin-left:370px ;" id="Next" type="button" disabled> <b> Next</b> </button>
+        <button class="button5" style="position: absolute; margin-top: 850px; margin-left:460px ;display: none;" id="run" type="button" onclick="run()"> <b> Run</b> </button>
+        <button class="button2" style="position: absolute; margin-top:850px ; margin-left:250px ;" type="button" id="Prev" disabled> <b>Previous </b> </button>
+
+
+        <button onclick="history.go(0)" class="button3" style="position: absolute;margin-top: 570px; margin-left:1470px ;" id="reset" type="button"> <b> Reset</b>  </button>
+
+        <button onclick="add()" class="button4" style="position: absolute;margin-top: 570px; margin-left:1340px ;" type="button" id="execute" disabled> <b> Execute</b>  </button>
+        <footer>
+
+
+            <p style="position: absolute;  margin-left:700px ;" class='copyright'> <b>Copyright &#169; 2022, Virtual Labs IIT Roorkee </b> </p>
+        </footer>
+    </div>
+
+
+
+    <script>
+        function Startprograms() {
+            document.getElementById("code_para").style.display = "inline";
+            document.getElementById("flowchart_div").style.display = "inline";
+            document.getElementById("start_bt").disabled = true;
+            document.getElementById("Next").disabled = false;
+            const ArrayofLine = document.getElementsByClassName('line');
+
+            let inde = -1;
+
+            Next.addEventListener('click', function() {
+                inde++;
+                ArrayofLine[inde].classList.add('line-highlight');
+
+                if (inde > 0) ArrayofLine[inde - 1].classList.remove('line-highlight');
+                if (inde == 0) {
+
+                    document.getElementById("start").style.fill = "#FFDB58";
+                    document.getElementById("Output2").innerHTML = "";
+                    document.getElementById("Output2").innerHTML = " Declaring Header file of C";
+
+                }
+                if (inde == 1) {
+                    document.getElementById("start").style.fill = "#FFDB58";
+                    document.getElementById("Prev").disabled = false;
+                    document.getElementById("Output2").innerHTML = "";
+                    document.getElementById("Output2").innerHTML = " function declaration";
+                }
+                if (inde == 2) {
+                    document.getElementById("start").style.fill = "#FFDB58";
+
+                    document.getElementById("Output2").innerHTML = "";
+                    document.getElementById("Output2").innerHTML = "  Here, we start the  function ";
+
+                }
+                if (inde == 3) {
+                    document.getElementById("start").style.fill = "#FFDB58";
+                    document.getElementById("Output2").innerHTML = "#8BE5AD";
+                    document.getElementById("Output2").innerHTML = " Opening braces  ";
+                }
+                if (inde == 4) {
+                    document.getElementById("start").style.fill = "#FFDB58";
+                    document.getElementById("f").style.fill = "#8BE5AD";
+                    document.getElementById("Output2").innerHTML = "";
+                    document.getElementById("Output2").innerHTML = " Holds the value taken from user  ";
+                }
+                if (inde == 5) {
+                    document.getElementById("start").style.fill = "#8BE5AD";
+                    document.getElementById("f").style.fill = "#FFDB58";
+
+
+
+                    document.getElementById("Output2").innerHTML = "";
+                    document.getElementById("Output2").innerHTML = "Enter a any positive integer number";
+                }
+                if (inde == 6) {
+                    document.getElementById("start").style.fill = "#8BE5AD";
+                    document.getElementById("f").style.fill = "#FFDB58";
+
+                    document.getElementById("s").style.fill = "#8BE5AD";
+                    document.getElementById("Output2").innerHTML = "";
+                    document.getElementById("Output2").innerHTML = " To read the input from user we use scanf";
+                }
+
+
+
+
+                if (inde == 7) {
+                    document.getElementById("start").style.fill = "#8BE5AD";
+                    document.getElementById("f").style.fill = "#FFDB58";
+                    document.getElementById("s").style.fill = "#8BE5AD";
+
+
+                    document.getElementById("sum").style.fill = "#8BE5AD";
+                    document.getElementById("sum1").style.fill = "#8BE5AD";
+                    document.getElementById("Output2").innerHTML = "";
+                    document.getElementById("Output2").innerHTML = "displaying factorial of the given number";
+                }
+                if (inde == 8) {
+                    document.getElementById("start").style.fill = "##8BE5AD";
+                    document.getElementById("f").style.fill = "#FFDB58";
+
+                    document.getElementById("sum").style.fill = "#8BE5AD";
+                    document.getElementById("sum1").style.fill = "#8BE5AD";
+                    document.getElementById("Output2").innerHTML = "#8BE5AD";
+                    document.getElementById("Output2").innerHTML = " return call";
+
+                }
+
+                if (inde == 9) {
+                    document.getElementById("start").style.fill = "#8BE5AD";
+                    document.getElementById("f").style.fill = "#8BE5AD";
+                    document.getElementById("s").style.fill = "#8BE5AD";
+
+
+                    document.getElementById("sum").style.fill = "#8BE5AD";
+                    document.getElementById("sum1").style.fill = "#8BE5AD";
+
+                    document.getElementById("Output2").innerHTML = "";
+                    document.getElementById("Output2").innerHTML = "  Close braces  ";
+                }
+                if (inde == 10) {
+                    document.getElementById("start").style.fill = "#8BE5AD";
+                    document.getElementById("f").style.fill = "#8BE5AD";
+                    document.getElementById("s").style.fill = "#FFDB58";
+
+
+                    document.getElementById("sum").style.fill = "#8BE5AD";
+                    document.getElementById("sum1").style.fill = "#8BE5AD";
+
+
+                    document.getElementById("Output2").innerHTML = "";
+                    document.getElementById("Output2").innerHTML = " Multiply with enter number and set factorial is 1";
+                }
+                if (inde == 11) {
+                    document.getElementById("start").style.fill = "#8BE5AD";
+                    document.getElementById("f").style.fill = "#8BE5AD";
+                    document.getElementById("s").style.fill = "#8BE5AD";
+
+
+                    document.getElementById("sum").style.fill = "#8BE5AD";
+                    document.getElementById("sum1").style.fill = "#8BE5AD";
+                    document.getElementById("sum2").style.fill = "#8BE5AD";
+
+                    document.getElementById("t").style.fill = "#8BE5AD";
+                    document.getElementById("Output2").innerHTML = "";
+                    document.getElementById("Output2").innerHTML = " Opening braces  ";
+                }
+                if (inde == 12) {
+                    document.getElementById("start").style.fill = "#8BE5AD";
+                    document.getElementById("f").style.fill = "#8BE5AD";
+
+                    document.getElementById("sum").style.fill = "#FFDB58";
+                    document.getElementById("sum1").style.fill = "#8BE5AD";
+                    document.getElementById("sum2").style.fill = "#8BE5AD";
+
+                    document.getElementById("t").style.fill = "#8BE5AD";
+                    document.getElementById("Output2").innerHTML = "";
+                    document.getElementById("Output2").innerHTML = " checked whether the value or number is equal to 1";
+                    scrollWin();
+                }
+                if (inde == 13) {
+                    document.getElementById("start").style.fill = "#8BE5AD";
+                    document.getElementById("f").style.fill = "#8BE5AD";
+
+                    document.getElementById("sum").style.fill = "#8BE5AD";
+                    document.getElementById("sum1").style.fill = "#FFDB58";
+                    document.getElementById("sum2").style.fill = "#8BE5AD";
+                    document.getElementById("t").style.fill = "#8BE5AD";
+                    document.getElementById("Output2").innerHTML = "";
+                    document.getElementById("Output2").innerHTML = " return multiply Numbers ";
+                }
+
+                if (inde == 14) {
+                    document.getElementById("start").style.fill = "#8BE5AD";
+                    document.getElementById("f").style.fill = "#8BE5AD";
+
+                    document.getElementById("sum").style.fill = "#8BE5AD";
+                    document.getElementById("sum1").style.fill = "#8BE5AD";
+                    document.getElementById("sum2").style.fill = "#FFDB58";
+                    document.getElementById("t").style.fill = "#8BE5AD";
+
+                    document.getElementById("Output2").innerHTML = "";
+                    document.getElementById("Output2").innerHTML = "using else statement";
+
+
+
+                }
+                if (inde == 15) {
+                    scrollwin();
+                    document.getElementById("start").style.fill = "#8BE5AD";
+                    document.getElementById("f").style.fill = "#8BE5AD";
+                    document.getElementById("t").style.fill = "#FFDB58";
+                    document.getElementById("sum2").style.fill = "#8BE5AD";
+                    document.getElementById("s").style.fill = "#8BE5AD";
+                    document.getElementById("Output2").innerHTML = "";
+                    document.getElementById("Output2").innerHTML = "Print the factorial of given number ";
+                }
+                if (inde == 16) {
+                    document.getElementById("start").style.fill = "#8BE5AD";
+                    document.getElementById("f").style.fill = "#8BE5AD";
+
+                    document.getElementById("sum").style.fill = "#8BE5AD";
+                    document.getElementById("sum1").style.fill = "#8BE5AD";
+                    document.getElementById("sum2").style.fill = "#8BE5AD";
+                    document.getElementById("t").style.fill = "#8BE5AD";
+                    document.getElementById("end").style.fill = "#FFDB58";
+                    document.getElementById("Output2").innerHTML = "";
+                    document.getElementById("Output2").innerHTML = " Closing braces ";
+                }
+                if (inde == 17) {
+                    document.getElementById("start").style.fill = "#8BE5AD";
+                    document.getElementById("f").style.fill = "#8BE5AD";
+
+                    document.getElementById("sum").style.fill = "#8BE5AD";
+                    document.getElementById("sum1").style.fill = "#8BE5AD";
+                    document.getElementById("sum2").style.fill = "#8BE5AD";
+                    document.getElementById("t").style.fill = "#8BE5AD";
+                    document.getElementById("end").style.fill = "#FFDB58";
+                    document.getElementById("Output2").innerHTML = "";
+                    document.getElementById("Output2").innerHTML = " Closing braces";
+                }
+
+
+
+                if (inde == 17)
+
+                {
+                    swal({
+                        title: "The code has ended now move to the output section",
+                        text: "Click on Run button",
+                        icon: "success",
+                        closeOnClickOutside: false
+
+                    })
+
+                    document.getElementById("end").style.fill = "#8BE5AD";
+                    document.getElementById("run").style.display = "inline";
+
+                    document.getElementById("Next").disabled = true;
+
+                    document.getElementById("Prev").disabled = true;
+
+                }
+
+            });
+
+            Prev.addEventListener('click', function() {
+                inde--;
+                ArrayofLine[inde].classList.add('line-highlight');
+
+                if (inde >= 0) ArrayofLine[inde + 1].classList.remove('line-highlight');
+                if (inde == 0) {
+                    document.getElementById("start").style.fill = "#FFDB58";
+                    document.getElementById("Output2").innerHTML = "";
+                    document.getElementById("Output2").innerHTML = " Declaring Header file of C";
+                    document.getElementById("Prev").disabled = true;
+                }
+
+
+                if (inde == 1) {
+                    document.getElementById("start").style.fill = "#FFDB58";
+                    document.getElementById("Prev").disabled = false;
+                    document.getElementById("Output2").innerHTML = "";
+                    document.getElementById("Output2").innerHTML = " function declaration";
+                }
+                if (inde == 2) {
+                    document.getElementById("start").style.fill = "#FFDB58";
+
+                    document.getElementById("Output2").innerHTML = "";
+                    document.getElementById("Output2").innerHTML = "  Here, we start the  function ";
+
+                }
+                if (inde == 3) {
+                    document.getElementById("start").style.fill = "#FFDB58";
+                    document.getElementById("Output2").innerHTML = "#8BE5AD";
+                    document.getElementById("Output2").innerHTML = " Opening braces  ";
+                }
+                if (inde == 4) {
+                    document.getElementById("start").style.fill = "#FFDB58";
+                    document.getElementById("f").style.fill = "#8BE5AD";
+                    document.getElementById("Output2").innerHTML = "";
+                    document.getElementById("Output2").innerHTML = " Holds the value taken from user  ";
+                }
+                if (inde == 5) {
+                    document.getElementById("start").style.fill = "#8BE5AD";
+                    document.getElementById("f").style.fill = "#FFDB58";
+
+
+
+                    document.getElementById("Output2").innerHTML = "";
+                    document.getElementById("Output2").innerHTML = "Enter a any positive integer number";
+                }
+                if (inde == 6) {
+                    document.getElementById("start").style.fill = "#8BE5AD";
+                    document.getElementById("f").style.fill = "#FFDB58";
+
+                    document.getElementById("s").style.fill = "#8BE5AD";
+                    document.getElementById("Output2").innerHTML = "";
+                    document.getElementById("Output2").innerHTML = "  To read the input from user we use scanf ";
+                }
+
+
+
+
+                if (inde == 7) {
+                    document.getElementById("start").style.fill = "#8BE5AD";
+                    document.getElementById("f").style.fill = "#FFDB58";
+                    document.getElementById("s").style.fill = "#8BE5AD";
+
+
+                    document.getElementById("sum").style.fill = "#8BE5AD";
+                    document.getElementById("sum1").style.fill = "#8BE5AD";
+                    document.getElementById("Output2").innerHTML = "";
+                    document.getElementById("Output2").innerHTML = "displaying factorial of the given number";
+                }
+                if (inde == 8) {
+                    document.getElementById("start").style.fill = "##8BE5AD";
+                    document.getElementById("f").style.fill = "#FFDB58";
+
+                    document.getElementById("sum").style.fill = "#8BE5AD";
+                    document.getElementById("sum1").style.fill = "#8BE5AD";
+                    document.getElementById("Output2").innerHTML = "#8BE5AD";
+                    document.getElementById("Output2").innerHTML = " return call";
+
+                }
+
+                if (inde == 9) {
+                    document.getElementById("start").style.fill = "#8BE5AD";
+                    document.getElementById("f").style.fill = "#8BE5AD";
+                    document.getElementById("s").style.fill = "#8BE5AD";
+
+
+                    document.getElementById("sum").style.fill = "#8BE5AD";
+                    document.getElementById("sum1").style.fill = "#8BE5AD";
+
+                    document.getElementById("Output2").innerHTML = "";
+                    document.getElementById("Output2").innerHTML = "  Close braces  ";
+                }
+                if (inde == 10) {
+                    document.getElementById("start").style.fill = "#8BE5AD";
+                    document.getElementById("f").style.fill = "#8BE5AD";
+                    document.getElementById("s").style.fill = "#FFDB58";
+
+
+                    document.getElementById("sum").style.fill = "#8BE5AD";
+                    document.getElementById("sum1").style.fill = "#8BE5AD";
+
+
+                    document.getElementById("Output2").innerHTML = "";
+                    document.getElementById("Output2").innerHTML = "Multiply with enter number and set factorial is 1";
+                }
+                if (inde == 11) {
+                    document.getElementById("start").style.fill = "#8BE5AD";
+                    document.getElementById("f").style.fill = "#8BE5AD";
+                    document.getElementById("s").style.fill = "#8BE5AD";
+
+
+                    document.getElementById("sum").style.fill = "#8BE5AD";
+                    document.getElementById("sum1").style.fill = "#8BE5AD";
+                    document.getElementById("sum2").style.fill = "#8BE5AD";
+
+                    document.getElementById("t").style.fill = "#8BE5AD";
+                    document.getElementById("Output2").innerHTML = "";
+                    document.getElementById("Output2").innerHTML = " Opening braces  ";
+                }
+                if (inde == 12) {
+                    document.getElementById("start").style.fill = "#8BE5AD";
+                    document.getElementById("f").style.fill = "#8BE5AD";
+
+                    document.getElementById("sum").style.fill = "#FFDB58";
+                    document.getElementById("sum1").style.fill = "#8BE5AD";
+                    document.getElementById("sum2").style.fill = "#8BE5AD";
+
+                    document.getElementById("t").style.fill = "#8BE5AD";
+                    document.getElementById("Output2").innerHTML = "";
+                    document.getElementById("Output2").innerHTML = " checked whether the value or number is equal to 1";
+                    scrollWin();
+                }
+                if (inde == 13) {
+                    document.getElementById("start").style.fill = "#8BE5AD";
+                    document.getElementById("f").style.fill = "#8BE5AD";
+
+                    document.getElementById("sum").style.fill = "#8BE5AD";
+                    document.getElementById("sum1").style.fill = "#FFDB58";
+                    document.getElementById("sum2").style.fill = "#8BE5AD";
+                    document.getElementById("t").style.fill = "#8BE5AD";
+                    document.getElementById("Output2").innerHTML = "";
+                    document.getElementById("Output2").innerHTML = " return multiply Numbers ";
+                }
+
+                if (inde == 14) {
+                    document.getElementById("start").style.fill = "#8BE5AD";
+                    document.getElementById("f").style.fill = "#8BE5AD";
+
+                    document.getElementById("sum").style.fill = "#8BE5AD";
+                    document.getElementById("sum1").style.fill = "#8BE5AD";
+                    document.getElementById("sum2").style.fill = "#FFDB58";
+                    document.getElementById("t").style.fill = "#8BE5AD";
+
+                    document.getElementById("Output2").innerHTML = "";
+                    document.getElementById("Output2").innerHTML = "using else statement";
+
+
+
+                }
+                if (inde == 15) {
+                    scrollwin();
+                    document.getElementById("start").style.fill = "#8BE5AD";
+                    document.getElementById("f").style.fill = "#8BE5AD";
+                    document.getElementById("t").style.fill = "#FFDB58";
+                    document.getElementById("sum2").style.fill = "#8BE5AD";
+                    document.getElementById("end").style.fill = "#8BE5AD";
+                    document.getElementById("s").style.fill = "#8BE5AD";
+                    document.getElementById("Output2").innerHTML = "";
+                    document.getElementById("Output2").innerHTML = " Print the factorial of given number ";
+                }
+                if (inde == 16) {
+                    document.getElementById("start").style.fill = "#8BE5AD";
+                    document.getElementById("f").style.fill = "#8BE5AD";
+
+                    document.getElementById("sum").style.fill = "#8BE5AD";
+                    document.getElementById("sum1").style.fill = "#8BE5AD";
+                    document.getElementById("sum2").style.fill = "#8BE5AD";
+                    document.getElementById("t").style.fill = "#8BE5AD";
+                    document.getElementById("end").style.fill = "#FFDB58";
+                    document.getElementById("Output2").innerHTML = "";
+                    document.getElementById("Output2").innerHTML = " Closing braces ";
+                }
+                if (inde == 17) {
+                    document.getElementById("start").style.fill = "#8BE5AD";
+                    document.getElementById("f").style.fill = "#8BE5AD";
+
+                    document.getElementById("sum").style.fill = "#8BE5AD";
+                    document.getElementById("sum1").style.fill = "#8BE5AD";
+                    document.getElementById("sum2").style.fill = "#8BE5AD";
+                    document.getElementById("t").style.fill = "#8BE5AD";
+                    document.getElementById("end").style.fill = "#FFDB58";
+                    document.getElementById("Output2").innerHTML = "";
+                    document.getElementById("Output2").innerHTML = " Closing braces";
+                }
+            });
+        }
+
+
+        // Run CODE
+
+        function run() {
+            document.getElementById("first_no_label").style.display = "inline";
+            document.getElementById("first").style.display = "inline";
+            document.getElementById("execute").disabled = false;
+            document.getElementById("run").disabled = true;
+            document.getElementById("Output2").innerHTML = "";
+        }
+
+        function add() {
+
+            if ((document.getElementById("first").value === "") && (document.getElementById("second").value === "")) {
+
+                swal({
+
+                    title: "Please enter the values",
+
+
+
+                })
+
+            } else {
+
+                number = parseFloat(document.getElementById("first").value);
+
+
+                let fact = 1;
+                for (i = 1; i <= number; i++) {
+                    fact *= i;
+                }
+
+
+                document.getElementById("answer").value = parseFloat(fact);
+                document.getElementById("output_label").style.display = "inline";
+                document.getElementById("answer").style.display = "inline";
+
+
+
+                return 0;
+
+
+            }
+
+        }
+    </script>
+    <script>
+        var c = document.getElementById("myCanvas");
+        var ctx = c.getContext("2d");
+        ctx.beginPath();
+        ctx.moveTo(0, -1);
+        ctx.lineTo(0, 89);
+        ctx.lineWidth = 4;
+        ctx.stroke();
+    </script>
+    <script>
+        var c = document.getElementById("myCanvas1");
+        var ctx = c.getContext("2d");
+        ctx.beginPath();
+        ctx.moveTo(0, -5);
+        ctx.lineTo(0, 150);
+        ctx.lineWidth = 4;
+        ctx.stroke();
+    </script>
+    <script>
+        var c = document.getElementById("myCanvas2");
+        var ctx = c.getContext("2d");
+        ctx.beginPath();
+        ctx.moveTo(80, 0);
+        ctx.lineTo(300, 0);
+        ctx.lineWidth = 4;
+        ctx.stroke();
+    </script>
+
+    <script>
+        var c = document.getElementById("myCanvas3");
+        var ctx = c.getContext("2d");
+        ctx.beginPath();
+        ctx.moveTo(170, 0);
+        ctx.lineTo(300, 0);
+        ctx.lineWidth = 4;
+        ctx.stroke();
+    </script>
+    <script>
+        var c = document.getElementById("myCanvas4");
+        var ctx = c.getContext("2d");
+        ctx.beginPath();
+        ctx.moveTo(0, -5);
+        ctx.lineTo(0, 350);
+        ctx.lineWidth = 4;
+        ctx.stroke();
+    </script>
+    <script>
+        var c = document.getElementById("myCanvas5");
+        var ctx = c.getContext("2d");
+        ctx.beginPath();
+        ctx.moveTo(150, 0);
+        ctx.lineTo(300, 0);
+        ctx.lineWidth = 4;
+        ctx.stroke();
+    </script>
+    <script>
+        function scrollWin() {
+            document.getElementById("anm").scrollTo(0, 200);
+        }
+    </script>
+    <script>
+        function scrollwin() {
+            document.getElementById("anm").scrollTo(240, 100);
+        }
+    </script>
+</body>
+
+</html>
